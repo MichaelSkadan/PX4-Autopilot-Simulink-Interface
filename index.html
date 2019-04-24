@@ -32,16 +32,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Skadan, Michael J. (LARC-D107)[SAS]</o:Author>
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Skadan, Michael J. (LARC-D107)[SAS]</o:LastAuthor>
-  <o:Revision>5</o:Revision>
-  <o:TotalTime>140</o:TotalTime>
+  <o:Revision>6</o:Revision>
+  <o:TotalTime>142</o:TotalTime>
   <o:Created>2019-04-24T18:26:00Z</o:Created>
-  <o:LastSaved>2019-04-24T18:59:00Z</o:LastSaved>
+  <o:LastSaved>2019-04-24T19:16:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>1168</o:Words>
-  <o:Characters>6661</o:Characters>
-  <o:Lines>55</o:Lines>
+  <o:Words>1195</o:Words>
+  <o:Characters>6818</o:Characters>
+  <o:Lines>56</o:Lines>
   <o:Paragraphs>15</o:Paragraphs>
-  <o:CharactersWithSpaces>7814</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>7998</o:CharactersWithSpaces>
   <o:Version>15.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -667,10 +667,11 @@ w\:* {behavior:url(#default#VML);}
  @font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
+	mso-font-charset:1;
 	mso-generic-font-family:roman;
+	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+	mso-font-signature:0 0 0 0 0 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
@@ -700,8 +701,7 @@ w\:* {behavior:url(#default#VML);}
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 a:link, span.MsoHyperlink
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
+	{mso-style-priority:99;
 	color:#0563C1;
 	text-decoration:underline;
 	text-underline:single;}
@@ -763,7 +763,18 @@ div.WordSection1
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 </style>
-<![endif]--><!--[if gte mso 9]><xml>
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics -->
+<script  async src="https://www.googletagmanager.com/gtag/js?id=UA-63985318-2">
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-63985318-2');
+</script>
+<!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext="edit" spidmax="1026"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
@@ -865,6 +876,11 @@ page-break-before:always'>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Overview of the PX4
 Autopilot Simulink Interface. <o:p></o:p></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:105%;mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin;color:black'>Checking out the project: <span
+class=SpellE>git</span> clone <a
+href="https://github.com/MichaelSkadan/PX4-Autopilot-Simulink-Interface">https://github.com/MichaelSkadan/PX4-Autopilot-Simulink-Interface</a><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;line-height:105%;mso-bidi-font-family:
 Calibri;mso-bidi-theme-font:minor-latin;color:black'>The interface is
@@ -1023,8 +1039,8 @@ alt=PX4AutopilotInterfaceSFunctionBlockCompletedMissionExample v:shapes="Picture
 Calibri;mso-bidi-theme-font:minor-latin;color:black'>Below is a diagram of the
 communication between the Simulink S-Function PX4 Autopilot Interface, the SITL
 PX4 autopilot, and the ground control station.<span style='mso-spacerun:yes'> 
-</span>All communication are via <span class=SpellE>MAVLink</span> over UDP on
-an IP network connected as shown in the diagram below.<span
+</span>All communication are via <span class=SpellE>MAVLink</span> over UDP on an
+IP network connected as shown in the diagram below.<span
 style='mso-spacerun:yes'>  </span>This example runs on a single Windows
 computer—Ubuntu could also be run on a separate machine.<o:p></o:p></span></p>
 
