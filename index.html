@@ -32,16 +32,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Skadan, Michael J. (LARC-D107)[SAS]</o:Author>
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Skadan, Michael J. (LARC-D107)[SAS]</o:LastAuthor>
-  <o:Revision>7</o:Revision>
-  <o:TotalTime>152</o:TotalTime>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>153</o:TotalTime>
   <o:Created>2019-04-24T18:26:00Z</o:Created>
-  <o:LastSaved>2019-04-24T19:33:00Z</o:LastSaved>
+  <o:LastSaved>2019-04-24T20:44:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>1192</o:Words>
-  <o:Characters>6799</o:Characters>
+  <o:Characters>6796</o:Characters>
   <o:Lines>56</o:Lines>
   <o:Paragraphs>15</o:Paragraphs>
-  <o:CharactersWithSpaces>7976</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>7973</o:CharactersWithSpaces>
   <o:Version>15.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -767,7 +767,18 @@ div.WordSection1
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 </style>
-<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><!-- Global site tag (gtag.js) - Google Analytics -->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><!-- Global site tag (gtag.js) - Google Analytics --><!-- Global site tag (gtag.js) - Google Analytics -->
+<script  async src="https://www.googletagmanager.com/gtag/js?id=UA-139058406-1">
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139058406-1');
+</script>
+
 <script  async src="https://www.googletagmanager.com/gtag/js?id=UA-63985318-2">
 </script>
 
@@ -901,8 +912,9 @@ href="https://github.com/MichaelSkadan/PX4-Autopilot-Simulink-Interface">https:/
 Calibri;mso-bidi-theme-font:minor-latin;color:black'>The interface is
 implemented in C code which is then compiled to generate a Simulink S-Function.
 In Simulink a user defined S-Function block can be added and the generated
-S-Function name &quot;PX4&quot; can be specified as the &quot;S-Function name: &quot;
-parameter. Below is an example of this block. This block's file name is &quot;PX4.slx&quot;.<o:p></o:p></span></p>
+S-Function name &quot;PX4&quot; can be specified as the &quot;S-Function name:
+&quot; parameter. Below is an example of this block. This block's file name is
+&quot;PX4.slx&quot;.<o:p></o:p></span></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -979,12 +991,12 @@ motion to generate new 6 degree of freedom vehicle state values. The vehicle
 state values are then utilized as input to the 2 sensor models. The sensor
 models' output is utilized as input to the PX4 Autopilot Interface. The PX4
 Autopilot Interface sends the new sensor input data to the SITL PX4 autopilot
-and then receives new motor commands back from the SITL PX4 autopilot. This
-process is repeated every cycle of the simulation. The simulation is running at
-a fixed rate of 250Hz, which is set in the Simulink simulation settings and
-specified as the Delta time step of 4000 microseconds to the PX4 Autopilot
-Interface. The remote control value 65535 is being sent to the PX4 Autopilot
-Interface, indicating that the remote control values should not be used.<o:p></o:p></span></p>
+and then receives new motor commands back from the SITL PX4 autopilot. This process
+is repeated every cycle of the simulation. The simulation is running at a fixed
+rate of 250Hz, which is set in the Simulink simulation settings and specified
+as the Delta time step of 4000 microseconds to the PX4 Autopilot Interface. The
+remote control value 65535 is being sent to the PX4 Autopilot Interface,
+indicating that the remote control values should not be used.<o:p></o:p></span></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -998,8 +1010,8 @@ src="index_files/image004.png"
 alt=QuadcopterPX4AutopilotInterfaceSFunctionBlockExample v:shapes="Picture_x0020_3"><![endif]></span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;line-height:105%;mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin;color:black'>With the Simulink model created,
-it can then be run and controlled by a SITL PX4 <span class=SpellE>autpilot</span>
+Calibri;mso-bidi-theme-font:minor-latin;color:black'>With the Simulink model
+created, it can then be run and controlled by a SITL PX4 <span class=SpellE>autpilot</span>
 as shown below. This image was captured on a Windows 10 computer. The computer
 has Simulink and <span class=SpellE>VirtualBox</span> installed. Ubuntu is
 being run in <span class=SpellE>VirtualBox</span>. Ubuntu has the SITL PX4
@@ -1014,17 +1026,17 @@ analysis on the bottom.<o:p></o:p></span></p>
 Calibri;mso-bidi-theme-font:minor-latin;color:black'>This image was captured
 after the vehicle had completed a simple mission. As can be seen in the signal
 analysis plot for the vehicle's altitude. The mission consisted of a takeoff,
-short hover at 5ft, longer hover at 10ft, and finally a landing. <o:p></o:p></span></p>
+short hover at 5ft, longer hover at 10ft, and finally a landing.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;line-height:105%;mso-bidi-font-family:
 Calibri;mso-bidi-theme-font:minor-latin;color:black'>When the Simulink
 simulation is run, the SITL PX4 autopilot CLI begins to update, indicating that
-it is communicating with the Simulink simulation. After the CLI outputs &quot;EKF
-commencing GPS fusion&quot;, the vehicle is ready to fly a mission. At that
-point, on the <span class=SpellE>QGroundControl</span> window, the start
-mission option was selected. As the vehicle flies its mission, updates are
-displayed on the SITL PX4 CLI, indicating &quot;Takeoff detected&quot; and &quot;Landing
-detected&quot;.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+it is communicating with the Simulink simulation. After the CLI outputs
+&quot;EKF commencing GPS fusion&quot;, the vehicle is ready to fly a mission.
+At that point, on the <span class=SpellE>QGroundControl</span> window, the
+start mission option was selected. As the vehicle flies its mission, updates
+are displayed on the SITL PX4 CLI, indicating &quot;Takeoff detected&quot; and
+&quot;Landing detected&quot;.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" alt="PX4AutopilotInterfaceSFunctionBlockCompletedMissionExample"
